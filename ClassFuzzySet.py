@@ -1,10 +1,11 @@
-import sklearn
+from sklearn.gaussian_process.kernels import RBF
 import skfuzzy 
 import numpy as np
 
 class FuzzySet:
 
     _fuzzed_dataset = None
+    _kernel_matrix  = None
 
     # Constructor
     def __init__(self, dataset, function):
@@ -17,25 +18,26 @@ class FuzzySet:
             mi = np.mean(dataset)
             sigma = np.std(dataset)
             return skfuzzy.gaussmf(dataset, mi, sigma)
+        if function is "sigmoid":
+            threshold = .5
+            width = 1
+            return skfuzzy.sigmf(dataset, threshold, width)
 
-    # Prints the fuzzyfied set, aka "_fuzzed_set"
-    def ShowSet(self):
-        print(self._fuzzed_dataset)
+    # List of kernel methods, provided in the "sklearn" library
+    def GaussKernel(self):
+        rbf = RBF()
+        self._kernel_matrix = rbf(self._fuzzed_dataset.reshape(-1, 1))
 
-
+    # Prints all class elements, for debug
+    def ShowClass(self):
+        print("_fuzzed_dataset = ", self._fuzzed_dataset)
+        print("_kernel_matrix = \n", self._kernel_matrix)
 
 """
-# List of kernel methods, provided in the "sklearn" library
-#def 
-#
-#def GaussKernel(X, Y):
-#    rbf_kernel(x.reshape(1, -1),y.reshape(1, -1))
+random_dataset = np.random.uniform(0, 100, 3)
+print("dataset = ", random_dataset)
 
-    
-random_dataset = np.random.uniform(0, 100, 100)
-print(random_dataset)
-
-fuzz = FuzzySet(random_dataset, "gauss")
-fuzz.ShowSet()
-# Implement cross-product from Roher's paper (Equation 11)
+fuzz1 = FuzzySet(random_dataset, "gauss")
+fuzz1.GaussKernel()
+fuzz1.ShowClass()
 """
