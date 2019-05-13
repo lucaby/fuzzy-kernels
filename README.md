@@ -28,7 +28,7 @@ Guevara Jorge and Canu Stephane and Hirata Jr Roberto
 Guevara Jorge and Canu Stephane and Hirata Jr Roberto 
 IEEE International Conference on Fuzzy Systems'' - FUZZ-IEEE 2013
 
-**_Fuzzy Set Similarity using a Distance-Based Kernel on Fuzzy Sets. _**
+**_Fuzzy Set Similarity using a Distance-Based Kernel on Fuzzy Sets._**
 Guevara, Jorge and Canu, Stephane and Hirata Jr, Roberto. 
 Book Chapter, Handbook of Fuzzy Sets Comparison - Theory, Algorithms and Applications
 
