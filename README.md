@@ -15,6 +15,9 @@ We will include examples of the use of those kernels in the following domains:
 * integration with scikit-learn
 
 ## References
+**_Kernels on Fuzzy Sets: an Overview_**, 
+Guevara Jorge and Canu Stephane and Hirata Jr Roberto 
+Learning on Distributions, Functions, Graphs and Groups @ NIPS-2017
 
 **_Cross product kernels on fuzzy sets for fuzzy set similarity_**,
 2017 IEEE International Conference on Fuzzy Systems - FUZZ-IEEE 2017
