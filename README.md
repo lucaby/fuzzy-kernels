@@ -16,8 +16,21 @@ We will include examples of the use of those kernels in the folowing domains:
 
 ## References
 
-Guevara, Jorge  and Canu, Stephane and Hirata Jr, Roberto **_Cross product kernels on fuzzy sets for fuzzy set similarity, 
-2017 IEEE International Conference on Fuzzy Systems - FUZZ-IEEE 2017_**
+**_Cross product kernels on fuzzy sets for fuzzy set similarity_**,
+2017 IEEE International Conference on Fuzzy Systems - FUZZ-IEEE 2017
+Guevara, Jorge  and Canu, Stephane and Hirata Jr, Roberto 
+
+**_ Positive Definite Kernel Functions on Fuzzy Sets_** , 
+Guevara Jorge and Canu Stephane and Hirata Jr Roberto 
+2014 IEEE International Conference on Fuzzy Systems - FUZZ-IEEE 
+
+**_ Kernel Functions in Takagi-Sugeno-Kang Fuzzy System with Nonsingleton Fuzzy Input_**, 
+Guevara Jorge and Canu Stephane and Hirata Jr Roberto 
+IEEE International Conference on Fuzzy Systems'' - FUZZ-IEEE 2013
+
+**_Fuzzy Set Similarity using a Distance-Based Kernel on Fuzzy Sets. _**
+Guevara, Jorge and Canu, Stephane and Hirata Jr, Roberto. 
+Book Chapter, Handbook of Fuzzy Sets Comparison - Theory, Algorithms and Applications
 
 ---
 ## Prerequisites
