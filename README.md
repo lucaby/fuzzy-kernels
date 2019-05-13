@@ -2,7 +2,7 @@
 
 ## Synopsis
 This project contains implementations of kernels on fuzzy sets. 
-We will include examples of the use of those kernels in the folowing domains:
+We will include examples of the use of those kernels in the following domains:
 * similarity measure between fuzzy sets. A possible example will be to measure similarity across subjective opinions, beliefs/uncertanty represented by linguistic values, etc
 * similarity between regions in image processing
 * estimation of distances (metrics) between fuzzy sets
