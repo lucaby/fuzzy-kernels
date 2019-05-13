@@ -1,5 +1,4 @@
-# fuzzy-kernels
-Kernels on fuzzy sets library
+# Kernels on fuzzy sets library
 
 ## Synopsis
 This project contains implementations of kernels on fuzzy sets. 
