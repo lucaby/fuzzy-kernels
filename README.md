@@ -11,6 +11,7 @@ We will include examples of the use of those kernels in the following domains:
 * computation of kernel gram matrices from fuzzy data
 * data description of fuzzy data (minimum volume sets, density estimation, one-class classification, etc)
 * predictive modeling (machine learning) of fuzzy data (classification, regression, ranking, etc) 
+* kriging on fuzzy data
 * integration with scikit-learn
 
 ## References
@@ -19,11 +20,11 @@ We will include examples of the use of those kernels in the following domains:
 2017 IEEE International Conference on Fuzzy Systems - FUZZ-IEEE 2017
 Guevara, Jorge  and Canu, Stephane and Hirata Jr, Roberto 
 
-**_ Positive Definite Kernel Functions on Fuzzy Sets_** , 
+**_Positive Definite Kernel Functions on Fuzzy Sets_** , 
 Guevara Jorge and Canu Stephane and Hirata Jr Roberto 
 2014 IEEE International Conference on Fuzzy Systems - FUZZ-IEEE 
 
-**_ Kernel Functions in Takagi-Sugeno-Kang Fuzzy System with Nonsingleton Fuzzy Input_**, 
+**_Kernel Functions in Takagi-Sugeno-Kang Fuzzy System with Nonsingleton Fuzzy Input_**, 
 Guevara Jorge and Canu Stephane and Hirata Jr Roberto 
 IEEE International Conference on Fuzzy Systems'' - FUZZ-IEEE 2013
 
