@@ -37,7 +37,8 @@ Book Chapter, Handbook of Fuzzy Sets Comparison - Theory, Algorithms and Applica
 
 ---
 ## Prerequisites
-
+* Numpy
+* Scikit-Fuzzy
 ## Installation
 
 ## Motivation
