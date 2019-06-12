@@ -14,8 +14,8 @@ def gaussmf(elems, mean, sigma):
 
     Input:
         elems: (Type: numpy.array) elements of the set
-        mean:  (Type: real)        mean of the set
-        sigma: (Type: real)        standart deviation of the set, or
+        mean:  (Type: float)       mean of the set
+        sigma: (Type: float)       standart deviation of the set, or
                (Type: numpy.array) covariance matrix
         
     Output:
