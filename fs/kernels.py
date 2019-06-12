@@ -11,6 +11,7 @@ from typing import Callable, List
 import types
 
 def crossProductFuzzySets(X, Y):
+
     """
 
     Calculates the Cross Product kernel between two fuzzy sets X and Y
@@ -70,6 +71,7 @@ def cross_product_kernel(X: FuzzySet,
 
 
 def input_validation(x: np.ndarray, y: np.ndarray, params: List[float]=''):
+    
     """
 
        Argument validation to be used by sklearn methods
@@ -80,6 +82,7 @@ def input_validation(x: np.ndarray, y: np.ndarray, params: List[float]=''):
        Output:
 
     """
+    
     x = np.array( x )
     y = np.array( y )
     # unique observation with unique feature

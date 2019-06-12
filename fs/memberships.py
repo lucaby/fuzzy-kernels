@@ -30,11 +30,11 @@ def gaussmf(elems, mean, sigma):
 
     if isinstance(sigma, np.ndarray):
         sigma=np.linalg.inv(sigma)
-        values   = np.einsum('ij,ij->i', np.dot((elems-mean),sigma), (elems-mean))
+        values = np.einsum('ij,ij->i', np.dot((elems-mean),sigma), (elems-mean))
         values = np.exp(-values)
 
     if isinstance(sigma,  (float, int)):
-        values=np.exp(-np.square(elems - mean)/sigma)
+        values = np.exp(-np.square(elems - mean)/sigma)
     return values
 
 
