@@ -1,7 +1,7 @@
 import unittest
-from sklearn.metrics.pairwise import linear_kernel
 import numpy as np
-from  kernelfuzzy.kernels import *
+from sklearn.metrics.pairwise import linear_kernel
+from  fs.kernels import *
 
 # tests with linear kernel
 class TestKernels(unittest.TestCase):
@@ -21,15 +21,15 @@ class TestKernels(unittest.TestCase):
 
     def test_tuples(self):  # multiple observations with unique features
         X = [[3], [4]]
-        Y = [[4], [5],[7]]
+        Y = [[4], [5], [7]]
         # self.np.array_equal(my_kernel(X, Y),linear_kernel(X,Y), "Should be equal")
         self.assertTrue( (my_kernel( X, Y ) == linear_kernel( np.array( X ).reshape( -1, 1 ),
                                                               np.array( Y ).reshape( -1, 1 ) )).all(),
                          "Should be equal" )
 
     def test_list_tuples(self):#several observations with several features
-        X=[[3,3],[4,4]]
-        Y=[[4,3],[4,4]]
+        X=[[3,3], [4,4]]
+        Y=[[4,3], [4,4]]
         #np.array_equal(my_kernel(X, Y),linear_kernel(X,Y), "Should be equal")
         self.assertTrue((my_kernel(X, Y) == linear_kernel(X,Y)).all(),"Should be equal")
 

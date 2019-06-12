@@ -6,7 +6,7 @@
 
 import itertools
 import numpy as np
-from kernelfuzzy.fuzzysets import FuzzySet
+from fs.fuzzysets import FuzzySet
 from typing import Callable, List
 import types
 

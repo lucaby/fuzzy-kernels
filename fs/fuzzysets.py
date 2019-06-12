@@ -3,6 +3,7 @@
     Class FuzzySet
 
 """
+
 class FuzzySet:
 
     _elements      = None  # Elements of the set 
@@ -18,20 +19,17 @@ class FuzzySet:
         Initializes a fuzzy set
     
         Input:
-            elements: (Type: numpy.array)     elements of the set
-            md:       (Type: numpy.array)     membership degrees
-            mf:       (Type: Function)        membership function
-            params:   (Type: List of objects) function custom parameters
+            elements: (Type: numpy.array) elements of the set
+            md:       (Type: numpy.array) membership degrees
+            mf:       (Type: function)    membership function
+            params:   (Type: list)        function custom parameters
         
-        Output:
-            (Type: Object "FuzzySet")
-
         """
         
-        # has md, but not mf
         self._elements = elements
         self._elements_type = type(elements[0])
 
+        # has md, but not mf
         if mf is None:
             self._md = md
 
