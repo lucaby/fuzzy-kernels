@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="fuzzy-kernels",
     version="0.0.1",
-    author="Lucas Yau",
+    author="Lucas Yau, Jorge Guevara, Roberto Hirata",
     author_email="",
     description="Kernel applications on fuzzy sets",
     long_description=long_description,
