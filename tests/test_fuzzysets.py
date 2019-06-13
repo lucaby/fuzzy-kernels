@@ -1,9 +1,9 @@
 import unittest
-from fs.fuzzysets import *
+from fs.fuzzyset import *
 from fs.memberships import *
 from numpy.random import uniform
 
-class TestFuzzySets(unittest.TestCase):
+class TestFuzzySet(unittest.TestCase):
 
     def test_types(self):
         elements = uniform(1, 100)

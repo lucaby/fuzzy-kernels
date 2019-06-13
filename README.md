@@ -45,5 +45,5 @@ Book Chapter, Handbook of Fuzzy Sets Comparison - Theory, Algorithms and Applica
 
 ## Contributors
 Lucas Yau, 
-Jorge Guevara
+Jorge Guevara,
 Roberto Hirata Jr
