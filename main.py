@@ -14,6 +14,13 @@ from plots import plot1D
 from  kernelfuzzy.kernels import crossProductFuzzySets,cross_product_kernel, my_kernel
 
 
+def createToyFuzzyDataSet(num_rows, num_cols):
+
+    [    [ FuzzySet(elements=np.random.uniform(0, 100, 2)  , mf=gaussmf, params=[np.mean(np.random.uniform(0, 100, 2)), np.std(np.random.uniform(0, 100, 2))])
+ for i in range(num_rows)] for j in range(num_cols)]
+
+
+
 def main():
 
 

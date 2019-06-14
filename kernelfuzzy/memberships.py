@@ -34,12 +34,7 @@ def gaussmf(elems, mean, sigma):
         values = np.exp(-values)
 
     if isinstance(sigma,  (float, int)):
-        values=np.exp(-np.square(elems - mean)/sigma)
+        values=np.exp(-np.square(elems - mean)/sigma**2)
     return values
-
-
-
-
-
 
 

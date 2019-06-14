@@ -107,3 +107,25 @@ def input_validation(x: np.ndarray, y: np.ndarray, params: List[float]=''):
         arguments.append( params )
 
     return tuple(arguments)
+
+
+def gram_matrix_cross_product_kernel(X, Y,
+                                     kernel_elements: Callable,
+                                     params_kernel_elements: List,
+                                     kernel_degrees: Callable,
+                                     params_kernel_degrees: List):
+    '''
+
+    '''
+    gram_matrix = np.zeros((X.shape[0], Y.shape[0]))
+    for i, tuple_x in enumerate(X):
+        for j, tuple_y in enumerate(Y):
+            tuple_x = tuple_x
+            tuple_y = tuple_y
+            # dot-product like operation between tuple of fuzzy sets
+            value = 0
+            for x, y, in zip(tuple_x, tuple_y):
+                value = value + cross_product_kernel(x, y, kernel_elements, params_kernel_elements, kernel_degrees,
+                                                     params_kernel_degrees)
+            gram_matrix[i, j] = value
+    return gram_matrix

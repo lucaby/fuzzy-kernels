@@ -1,2 +1,9 @@
 #list of TODOS
-- 
+- criar repositorio https://github.com/fuzzy-kernel-machines/fuzzy-kernel-machines
+- PLOTS inline with jupyter
+    -  plot iterativos, tem que suportar dois conjuntos fuzzy
+    -  chamar ao kernel de produto cruzado e apresentar o resultado conforme o usuario interage
+
+- Instalador via pip e conda
+- melhorar markdown e o texto dos exemplos das notebooks, incluir formulas latex
+- ver issues

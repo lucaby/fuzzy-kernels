@@ -13,7 +13,7 @@ class FuzzySet:
 
 
 
-    def __init__(self, elements, md=None, mf=None, params=None):
+    def __init__(self, elements=None, md=None, mf=None, params=None):
         
         """
 
@@ -29,17 +29,30 @@ class FuzzySet:
             (Type: Object "FuzzySet")
 
         """
-        #types of fuzzy sets (unfortunately python does not support several constructors)
-        #FIRST TYPE: elements and membership degrees (md) are given but not the membership function (mf)
-        self._elements = elements
-        self._elements_type = type(elements[0])
+        #FIRST TYPE: empty fuzzy set
+        if elements is None and  md is None and mf is None and params is None:
+            self._elements = None
+            self._elements_type = None
+            self._md = md = None
+            self._params = params = None
+            self._mf = None
 
-        if mf is None:
+
+        #types of fuzzy sets (unfortunately python does not support several constructors)
+        #SECOND TYPE: elements and membership degrees (md) are given but not the membership function (mf)
+        if elements is not None:
+            self._elements = elements
+            if isinstance(self._elements, (float, int)):
+                self._elements_type = type(elements)
+            else:
+                self._elements_type = type(elements[0])
+
+        if elements is not None and mf is None:
             self._md=md
 
-        # SECOND TYPE: elements and membership function (mf) are given, then the membership degrees are estimated
+        # THIRD TYPE: elements and membership function (mf) are given, then the membership degrees are estimated
 
-        if md is None:
+        if elements is not None and md is None:
             self._params = params
             self._mf = mf
             self._md = self._mf(self._elements, *self._params)
@@ -69,8 +82,10 @@ class FuzzySet:
          Returns the pair (_elements, _md) elements and membership degree
 
         """
-
-        return list(zip(self._elements,self._md))
+        if  isinstance(self._elements,  (float, int)) and isinstance(self._md,  (float, int)):
+            return list(zip(list([self._elements]),list([self._md])))
+        else:
+            return list(zip(self._elements,self._md))
 
     def get_degrees(self):
         """
