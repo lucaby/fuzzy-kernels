@@ -1,13 +1,13 @@
 import unittest
-from fs.fuzzyset import *
-from fs.memberships import *
-from numpy.random import uniform
+import numpy as np
+from kernelfuzzy.fuzzyset import *
+from kernelfuzzy.memberships import *
 
 class TestFuzzySet(unittest.TestCase):
 
     def test_types(self):
-        elements = uniform(1, 100)
-        self.assertIs(type(elements), numpy.array)
+        elements = np.random.uniform(1, 100)
+        self.assertIs(type(elements), np.array)
 
         elements_type = type(elements[0])
         self.assertIsNotNone(elements_type)
@@ -15,5 +15,5 @@ class TestFuzzySet(unittest.TestCase):
         mf = gaussmf
         self.assertTrue(callable(mf))
 
-        md = uniform()
-        self.assertIs(type(md), numpy.array)
+        md = np.random.uniform()
+        self.assertIs(type(md), np.array)

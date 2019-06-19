@@ -14,8 +14,8 @@ def gaussmf(elems, mean, sigma):
 
     Input:
         elems: (Type: numpy.array) elements of the set
-        mean:  (Type: float)       mean of the set
-        sigma: (Type: float)       standart deviation of the set, or
+        mean:  (Type: real)        mean of the set
+        sigma: (Type: real)        standart deviation of the set, or
                (Type: numpy.array) covariance matrix
         
     Output:
@@ -29,17 +29,10 @@ def gaussmf(elems, mean, sigma):
     #    return np.exp(-np.transpose(elems - mean) * np.linalg.inv(sigma) * (elems - mean))
 
     if isinstance(sigma, np.ndarray):
-        sigma=np.linalg.inv(sigma)
+        sigma  = np.linalg.inv(sigma)
         values = np.einsum('ij,ij->i', np.dot((elems-mean),sigma), (elems-mean))
         values = np.exp(-values)
 
     if isinstance(sigma,  (float, int)):
-        values = np.exp(-np.square(elems - mean)/sigma)
+        values = np.exp(-np.square(elems - mean)/sigma**2)
     return values
-
-
-
-
-
-
-
