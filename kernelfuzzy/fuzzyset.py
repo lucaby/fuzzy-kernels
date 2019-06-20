@@ -118,8 +118,8 @@ class FuzzySet:
 
         """
 
-        print("_elements      = ", self._elements)   
-        print("_elements_type = ", self._elements_type)   
-        print("_mf            = ", self._mf)   
-        print("_md            = ", self._md)   
-        print("_params        = ", self._params)   
+        print("(_elements)      \n", self._elements, "\n")   
+        print("(_elements_type) \n", self._elements_type, "\n")   
+        print("(_mf)            \n", self._mf, "\n")   
+        print("(_md)            \n", self._md, "\n")   
+        print("(_params)        \n", self._params, "\n")   

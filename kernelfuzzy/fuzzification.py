@@ -5,7 +5,7 @@
 """
 
 import numpy as np
-from kernelfuzzy.fuzzysets import FuzzySet
+from kernelfuzzy.fuzzyset import FuzzySet
 from kernelfuzzy.memberships import gaussmf
 
 class FuzzyData:
@@ -19,11 +19,7 @@ class FuzzyData:
         if data is not None:
             self._data = data
             self._target = target
-            self._data.columns = self._data.columns.str.strip()
-                                                   .str.lower()
-                                                   .str.replace(' ', '_')
-                                                   .str.replace('(', '')
-                                                   .str.replace(')', '')
+            self._data.columns = self._data.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('(', '').str.replace(')', '')
 
     def quantile_fuzzification_classification(self):
         
@@ -72,10 +68,10 @@ class FuzzyData:
 
         """
 
-        print("_data             =", _data)
-        print("_fuzzydata        =", _fuzzydata)
-        print("_epistemic_values =", _epistemic_values)
-        print("_target           =", _target)
+        print("(_data)             \n", _data, "\n")
+        print("(_fuzzydata)        \n", _fuzzydata, "\n")
+        print("(_epistemic_values) \n", _epistemic_values, "\n")
+        print("(_target)           \n", _target, "\n")
 
     # TOYS DATASETS
     @staticmethod
