@@ -32,7 +32,7 @@ def plot1D(fuzzyset):
 
     fig = dict(data=data, layout=layout)
     
-    plt.plot(fig, filename='fuzzyset.html')
+    plt.iplot(fig, filename='fuzzyset.html')
 
 
 def plot2D(fuzzyset):
